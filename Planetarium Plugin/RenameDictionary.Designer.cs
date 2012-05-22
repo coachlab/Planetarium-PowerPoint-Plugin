@@ -155,7 +155,7 @@
             this.cmdSaveChanges.Name = "cmdSaveChanges";
             this.cmdSaveChanges.Size = new System.Drawing.Size(94, 26);
             this.cmdSaveChanges.TabIndex = 14;
-            this.cmdSaveChanges.Text = "Save changes";
+            this.cmdSaveChanges.Text = "Finish";
             this.cmdSaveChanges.UseVisualStyleBackColor = true;
             this.cmdSaveChanges.Click += new System.EventHandler(this.cmdSaveChanges_Click);
             // 

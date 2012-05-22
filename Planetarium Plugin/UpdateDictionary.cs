@@ -29,7 +29,8 @@ namespace Planetarium_Plugin
         {
             InitializeComponent();
             pnlDictionary.Enabled = true;
-            pnlRenameSlide.Enabled = false;
+            pnlRenameSlide.Enabled = false; 
+            
         }
         /// <summary>
         /// Opens the dictionary whose name is selected on the combobox for update
@@ -41,8 +42,8 @@ namespace Planetarium_Plugin
 
             dictionaryName = cmbDictionary.SelectedItem.ToString();
             location = api.getDictionary(dictionaryName).Slide_URL;
-            presentation = Globals.ThisAddIn.Application.ActivePresentation;
-            presentation.Close();
+            //presentation = Globals.ThisAddIn.Application.ActivePresentation;
+            //presentation.Close();
             presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
             presentation = Globals.ThisAddIn.Application.ActivePresentation;
             pnlDictionary.Enabled = false;
@@ -147,11 +148,15 @@ namespace Planetarium_Plugin
 
         private void cmdFinish_Click(object sender, EventArgs e)
         {
+
             presentation.Save();
             cmbDictionary.SelectedIndex = -1;
+            
             pnlDictionary.Enabled = true;
             
             pnlRenameSlide.Enabled = false;
+            //presentation.Close();
+            
         }
 
         private void cmbDictionary_Click_1(object sender, EventArgs e)

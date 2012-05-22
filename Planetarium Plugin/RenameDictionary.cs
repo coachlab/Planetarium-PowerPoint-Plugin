@@ -67,8 +67,7 @@ namespace Planetarium_Plugin
             dictionaryName = cmbDictionaries.SelectedItem.ToString();
             location = api.getDictionary(dictionaryName).Slide_URL;
             txtOldName.Text = dictionaryName;
-            presentation = Globals.ThisAddIn.Application.ActivePresentation;
-            presentation.Close();
+          
             presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
             presentation = Globals.ThisAddIn.Application.ActivePresentation;
             pnlDictionary.Enabled = false;
@@ -82,14 +81,18 @@ namespace Planetarium_Plugin
                 if (api.dictionary_exists(dictionaryName))
                 {
                     string rename = txtRename.Text;
-
-                    api.updateDictionary(dictionaryName, rename);
-                    MessageBox.Show("Dictionary Name Updated");
+                    DialogResult r = MessageBox.Show("Are you sure you want to rename the " + dictionaryName + " dictionary \n to " +rename+ "?", "Delete Dictionary Confirmation", MessageBoxButtons.YesNo);
+                    if (r.ToString().Equals("Yes"))
+                    {
+                        api.updateDictionary(dictionaryName, rename);
+                        MessageBox.Show("Dictionary Name Updated");
+                    }
+                    
                     reload();
                     cmbDictionaries.SelectedText = rename; //???
                     txtOldName.Text = rename;
                     dictionaryName = rename;
-                    txtRename.Clear();
+                    
                 }
                 else
                 {
@@ -100,15 +103,19 @@ namespace Planetarium_Plugin
             {
                 MessageBox.Show("Field cannot be Blank");
             }
-            //else dictionary name alerady exists
+            
         }
 
         private void cmdSaveChanges_Click(object sender, EventArgs e)
         {
-            //presentation.Save();
+            presentation.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
+            presentation.Save();
+            txtOldName.Clear();
+            txtRename.Clear();
             cmbDictionaries.SelectedIndex = -1;
             pnlDictionary.Enabled = true;
             pnlRenameDictionary.Enabled = false;
+            presentation.Close();
         }
         
 

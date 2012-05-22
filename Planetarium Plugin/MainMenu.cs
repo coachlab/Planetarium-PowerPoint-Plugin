@@ -136,6 +136,7 @@ namespace Planetarium_Plugin
 
         private void cmdHelp_Click(object sender, RibbonControlEventArgs e)
         {
+            
             System.Diagnostics.Process.Start(Path.GetFullPath("myPVRS.chm"));
      
         }

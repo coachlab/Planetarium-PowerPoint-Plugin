@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using Office = Microsoft.Office.Core;
@@ -23,6 +24,8 @@ namespace Planetarium_Plugin
         string dictionaryName = "";
         string location = "";
         PowerPoint.Presentation pres;
+
+        string filePath = Path.GetFullPath("/Planetarium Speech Recognition/Dictionaries");
         /// <summary>
         /// Constructor for adddictionary class
         /// </summary>
@@ -32,6 +35,14 @@ namespace Planetarium_Plugin
             pnlDictionary.Enabled = true;
             pnlAssociations.Enabled = false;
             cmdAddSlide.Text = "Add Slide";
+
+
+            if (!System.IO.Directory.Exists(filePath)); 
+            {
+                System.IO.Directory.CreateDirectory(filePath); 
+            }
+            
+
         }
 
         /// <summary>
@@ -50,15 +61,16 @@ namespace Planetarium_Plugin
                 {
                     
                     pres = Globals.ThisAddIn.Application.ActivePresentation;
-                    string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    location = filePath + "\\Dictionaries\\" + dictionaryName;
-
+                   
+                    location = filePath + "\\" + dictionaryName;
+    
                     pres.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
                     pres.Save();
-
+                 
                     api.addDictionary(dictionaryName, location + ".pptx");
 
                     MessageBox.Show("Dictionary added. To proceed to adding slides please click on the slide displayed on the left");
+               
                     pnlAssociations.Enabled = true;
                     pnlDictionary.Enabled = false;
 
@@ -77,12 +89,13 @@ namespace Planetarium_Plugin
         /// <param name="e"></param>
         private void cmdAddSlide_Click_1(object sender, EventArgs e)
         {
+           try{
+
             if (txtPhrase.Text != "")
             {
                 if (dictionaryName != "")
                 {
-                    try
-                    {
+                    
                         if (!api.keyword_exists(dictionaryName, txtPhrase.Text) && !api.keyword_exists(dictionaryName, Int32.Parse(txtSlideNumber.Tag.ToString())))
                         {
                             api.addKeyword(dictionaryName, txtPhrase.Text.ToLower(), Int32.Parse(txtSlideNumber.Tag.ToString()));
@@ -94,7 +107,6 @@ namespace Planetarium_Plugin
                             MessageBox.Show("Keyword Cannot Be Updated! - Use the Update Panel");
                         }
                     }
-                    catch (NullReferenceException ex) { }
 
                 }
                 else
@@ -103,6 +115,10 @@ namespace Planetarium_Plugin
                 }
 
             }
+           catch (NullReferenceException ex)
+           {
+               MessageBox.Show("Please click on the slide in panel"); //make more firendly
+           }
         }
 
 
@@ -118,6 +134,7 @@ namespace Planetarium_Plugin
             pnlAssociations.Enabled = false;
             txtDictionary.Clear();
             txtPhrase.Clear();
+            pres.Close();
         }
 
         /// <summary>

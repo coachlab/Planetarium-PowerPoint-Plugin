@@ -263,9 +263,9 @@
       <DependentUpon>UpdateDictionary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <EmbeddedResource Include="myPVRS.chm">
+    <Content Include="myPVRS.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Content>
     <None Include="Planetarium Plugin_TemporaryKey.pfx" />
     <None Include="Planetarium.dbml.layout">
       <DependentUpon>Planetarium.dbml</DependentUpon>
@@ -339,6 +339,7 @@
   <ItemGroup>
     <None Include="icons\1335947130_gallery.png" />
   </ItemGroup>
+  <ItemGroup />
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->
