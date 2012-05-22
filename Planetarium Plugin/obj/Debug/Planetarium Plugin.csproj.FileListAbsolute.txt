@@ -1,0 +1,117 @@
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AboutBox1.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AddDictionary.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.MainMenu.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RemoveDictionary.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.UpdateDictionary.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Presentation.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Properties.Resources.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium Plugin.csproj.GenerateResource.Cache
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.resx
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.cs
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.Designer.cs
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RenameDictionary.resources
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.config
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.pdb
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.manifest
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.vsto
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.dll
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.pdb
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium Plugin.csprojResolveAssemblyReference.cache
+C:\Users\Hollard\Desktop\FINAL\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\myPVRS.chm
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\ResolveAssemblyReference.cache
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AboutBox1.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AddDictionary.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.MainMenu.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RemoveDictionary.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RenameDictionary.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.UpdateDictionary.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Presentation.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Properties.Resources.resources
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\GenerateResource.read.1.tlog
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\GenerateResource.write.1.tlog
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.dll
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.resx
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.cs
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.Designer.cs
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\myPVRS.chm
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.config
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.pdb
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.manifest
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.vsto
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+G:\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.pdb
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.resx
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.cs
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.Designer.cs
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\myPVRS.chm
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.config
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.pdb
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.manifest
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.vsto
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AboutBox1.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AddDictionary.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.MainMenu.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RemoveDictionary.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RenameDictionary.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.UpdateDictionary.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Presentation.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Properties.Resources.resources
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.dll
+C:\Users\Shovan\Desktop\Planetarium\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.pdb
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.resx
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.cs
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.Designer.cs
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\myPVRS.chm
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.config
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.pdb
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.manifest
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.vsto
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium Plugin.csprojResolveAssemblyReference.cache
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AboutBox1.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AddDictionary.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.MainMenu.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RemoveDictionary.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RenameDictionary.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.UpdateDictionary.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Presentation.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Properties.Resources.resources
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium Plugin.csproj.GenerateResource.Cache
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.dll
+C:\Users\Hollard\Desktop\Planetarium_Voice_Recognisances_System\Planetarium_Voice_Recognisances_System\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.pdb
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.resx
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.cs
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\AboutBox1.Designer.cs
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\myPVRS.chm
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.config
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.pdb
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.dll.manifest
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\PP.vsto
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium Plugin.csprojResolveAssemblyReference.cache
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AboutBox1.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AddDictionary.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.MainMenu.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RemoveDictionary.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RenameDictionary.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.UpdateDictionary.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Presentation.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Properties.Resources.resources
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\Planetarium Plugin.csproj.GenerateResource.Cache
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.dll
+C:\Users\Hollard\Desktop\Latest Project\Planetarium Plugin\Planetarium Plugin\obj\Debug\PP.pdb

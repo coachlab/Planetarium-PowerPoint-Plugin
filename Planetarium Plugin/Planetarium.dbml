@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PlanetariumDB" Class="PlanetariumDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sql2008r2;Initial Catalog=PlanetariumDB;Integrated Security=True" SettingsObjectName="Planetarium_Plugin.Properties.Settings" SettingsPropertyName="PlanetariumDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dictionary" Member="Dictionaries">
+    <Type Name="Dictionary">
+      <Column Name="Dictionary_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Slide_URL" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="Dictionary_Keyword" Member="Keywords" ThisKey="Dictionary_ID" OtherKey="Dictionary_ID" Type="Keyword" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Keyword" Member="Keywords">
+    <Type Name="Keyword">
+      <Column Name="Dictionary_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Phrase" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Slide_Num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Keyword_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Dictionary_Keyword" Member="Dictionary" ThisKey="Dictionary_ID" OtherKey="Dictionary_ID" Type="Dictionary" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
