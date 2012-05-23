@@ -63,11 +63,14 @@ namespace Planetarium_Plugin
         }
         private void cmbDictionaries_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            dictionaryName = cmbDictionaries.SelectedItem.ToString();
+            if (cmbDictionaries.SelectedIndex != -1)
+            {
+                dictionaryName = cmbDictionaries.SelectedItem.ToString();
+            }
             location = api.getDictionary(dictionaryName).Slide_URL;
             txtOldName.Text = dictionaryName;
-          
+
+            Globals.ThisAddIn.Application.ActivePresentation.Close();
             presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
             presentation = Globals.ThisAddIn.Application.ActivePresentation;
             pnlDictionary.Enabled = false;
@@ -108,14 +111,22 @@ namespace Planetarium_Plugin
 
         private void cmdSaveChanges_Click(object sender, EventArgs e)
         {
-            presentation.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
-            presentation.Save();
+            if (!string.IsNullOrEmpty(txtRename.Text))
+            {
+                presentation.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
+                presentation.Save();  
+            }
+            else {
+                MessageBox.Show("No changes have been made");
+
+            }
+            
             txtOldName.Clear();
             txtRename.Clear();
             cmbDictionaries.SelectedIndex = -1;
             pnlDictionary.Enabled = true;
             pnlRenameDictionary.Enabled = false;
-            presentation.Close();
+            //presentation.Close();
         }
         
 

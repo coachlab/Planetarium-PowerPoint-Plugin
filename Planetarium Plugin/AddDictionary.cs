@@ -59,26 +59,30 @@ namespace Planetarium_Plugin
             {
                 if (dictionaryName != "")
                 {
-                    
+
                     pres = Globals.ThisAddIn.Application.ActivePresentation;
-                   
+
                     location = filePath + "\\" + dictionaryName;
-    
+
                     pres.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
                     pres.Save();
-                 
+
                     api.addDictionary(dictionaryName, location + ".pptx");
 
-                    MessageBox.Show("Dictionary added. To proceed to adding slides please click on the slide displayed on the left");
-               
+                    MessageBox.Show("Dictionary added. To proceed to adding slides please click on the slide displayed on the left pane");
+
                     pnlAssociations.Enabled = true;
                     pnlDictionary.Enabled = false;
 
                 }
+                else 
+                {
+                    MessageBox.Show("Dictionary name cannot be blank - Please enter a dictionary name");
+                }
             }
             else
             {
-                MessageBox.Show("Already exists");
+                MessageBox.Show("\""+ dictionaryName + "\"" + " dictionary already exists");
             }
         }
 
@@ -129,13 +133,23 @@ namespace Planetarium_Plugin
         /// <param name="e"></param>
         private void cmdFinish_Click(object sender, EventArgs e)
         {
-            pres.Save();
-            pnlDictionary.Enabled = true;
-            pnlAssociations.Enabled = false;
-            txtDictionary.Clear();
-            txtPhrase.Clear();
-            pres.Close();
-        }
+            try
+            {
+                pres.Save();
+                pnlDictionary.Enabled = true;
+                pnlAssociations.Enabled = false;
+                txtDictionary.Clear();
+                txtPhrase.Clear();
+                
+                //pres.Close();
+             
+            }
+            catch (NullReferenceException ex) {
+                MessageBox.Show("No changes made");
+            }catch(System.Runtime.InteropServices.COMException ex){
+
+            }
+       }
 
         /// <summary>
         /// Display the keyword for the selected slide

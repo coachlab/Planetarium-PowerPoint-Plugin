@@ -22,18 +22,23 @@ namespace Planetarium_Plugin
         private void cmdRemoveDictionary_Click(object sender, EventArgs e)
         {
             PlanetariumDB_API api = new PlanetariumDB_API();
-            dictionary = cmbDictionary.SelectedItem.ToString();
-
+            
+            
             if (cmbDictionary.SelectedIndex != -1)
             {
+                dictionary = cmbDictionary.SelectedItem.ToString();
                 DialogResult r = MessageBox.Show("Are you sure you want to delete the " + dictionary + " dictionary?", "Delete Dictionary Confirmation", MessageBoxButtons.YesNo);
                 if (r.ToString().Equals("Yes"))
                 {
                     api.removeDictionary(cmbDictionary.SelectedItem.ToString());
                     MessageBox.Show("Dictionary deleted");
                 }
+                
             }
-
+            else
+            {
+                MessageBox.Show("Dictionary was not selected - Please select a dictionary to delete");
+            }
             reload();
             
        }
@@ -60,6 +65,7 @@ namespace Planetarium_Plugin
             }
 
             cmbDictionary.SelectedIndex = 0;
+            cmbDictionary.SelectedText = cmbDictionary.SelectedItem.ToString();
         }
 
         private void cmbDictionary_Click(object sender, EventArgs e)

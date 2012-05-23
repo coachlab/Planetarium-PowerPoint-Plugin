@@ -42,10 +42,18 @@ namespace Planetarium_Plugin
 
             dictionaryName = cmbDictionary.SelectedItem.ToString();
             location = api.getDictionary(dictionaryName).Slide_URL;
-            //presentation = Globals.ThisAddIn.Application.ActivePresentation;
-            //presentation.Close();
-            presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
-            presentation = Globals.ThisAddIn.Application.ActivePresentation;
+
+           // if (Globals.ThisAddIn.Application.ActivePresentation != null)
+           // {
+                presentation = Globals.ThisAddIn.Application.ActivePresentation;
+                //Globals.ThisAddIn.Application.ActivePresentation.Close();
+           // }
+           // else
+            //{
+                Globals.ThisAddIn.Application.ActivePresentation.Close();
+                presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
+                presentation = Globals.ThisAddIn.Application.ActivePresentation;
+            //}
             pnlDictionary.Enabled = false;
             pnlRenameSlide.Enabled = true;
  
@@ -101,7 +109,7 @@ namespace Planetarium_Plugin
         /// <param name="e"></param>
         private void cmdUpdateDictionary_Click(object sender, EventArgs e)
         {
-            if (txtKeyword.Text != "")
+            if (txtKeyword.Text != "" && txtSlideNumber.Text!=string.Empty)
             {
                 if (api.keyword_exists(dictionaryName, Int32.Parse(txtSlideNumber.Tag.ToString())))
                 {
