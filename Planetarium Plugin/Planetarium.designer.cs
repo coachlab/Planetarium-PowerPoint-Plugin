@@ -39,7 +39,7 @@ namespace Planetarium_Plugin
     #endregion
 		
 		public PlanetariumDataContext() : 
-				base(global::Planetarium_Plugin.Properties.Settings.Default.PlanetariumDBConnectionString, mappingSource)
+				base(global::Planetarium_Plugin.Properties.Settings.Default.PlanetariumDBConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}

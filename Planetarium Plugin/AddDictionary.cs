@@ -15,6 +15,7 @@ using System.IO;
 using System.Windows.Forms;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using Office = Microsoft.Office.Core;
+using System.Text.RegularExpressions;
 
 namespace Planetarium_Plugin
 {
@@ -23,7 +24,7 @@ namespace Planetarium_Plugin
         PlanetariumDB_API api = new PlanetariumDB_API();
         string dictionaryName = "";
         string location = "";
-        PowerPoint.Presentation pres;
+        PowerPoint.Presentation presentation;
 
         string filePath = Path.GetFullPath("/Planetarium Speech Recognition/Dictionaries");
         /// <summary>
@@ -54,18 +55,19 @@ namespace Planetarium_Plugin
         {
 
             dictionaryName = txtDictionary.Text;
+            //dictionaryName = txtDictionary.Text.ToLower(); ?
 
             if (!api.dictionary_exists(dictionaryName))
             {
                 if (dictionaryName != "")
                 {
 
-                    pres = Globals.ThisAddIn.Application.ActivePresentation;
+                    presentation = Globals.ThisAddIn.Application.ActivePresentation;
 
                     location = filePath + "\\" + dictionaryName;
 
-                    pres.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
-                    pres.Save();
+                    presentation.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
+                    presentation.Save();
 
                     api.addDictionary(dictionaryName, location + ".pptx");
 
@@ -99,7 +101,8 @@ namespace Planetarium_Plugin
             {
                 if (dictionaryName != "")
                 {
-                    
+                    if (Regex.IsMatch(txtPhrase.Text, @"^[a-zA-Z]+$"))
+                    {
                         if (!api.keyword_exists(dictionaryName, txtPhrase.Text) && !api.keyword_exists(dictionaryName, Int32.Parse(txtSlideNumber.Tag.ToString())))
                         {
                             api.addKeyword(dictionaryName, txtPhrase.Text.ToLower(), Int32.Parse(txtSlideNumber.Tag.ToString()));
@@ -110,6 +113,11 @@ namespace Planetarium_Plugin
                         {
                             MessageBox.Show("Keyword Cannot Be Updated! - Use the Update Panel");
                         }
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Keyword can only contain letters");
+                    }
                     }
 
                 }
@@ -135,13 +143,24 @@ namespace Planetarium_Plugin
         {
             try
             {
-                pres.Save();
+                presentation.Save();
                 pnlDictionary.Enabled = true;
                 pnlAssociations.Enabled = false;
                 txtDictionary.Clear();
                 txtPhrase.Clear();
-                
-                //pres.Close();
+
+                if (presentation != null)
+                {
+                    presentation.Close();
+
+                    PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
+                    PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
+
+                    PowerPoint.Slides slides = newPresentation.Slides;
+                    PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+
+                    newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
+                }
              
             }
             catch (NullReferenceException ex) {

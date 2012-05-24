@@ -15,6 +15,7 @@ using Office = Microsoft.Office.Core;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using System.Runtime.ExceptionServices;
 
+
 namespace Planetarium_Plugin
 {
     public partial class MainMenu
@@ -33,6 +34,7 @@ namespace Planetarium_Plugin
         UpdateDictionary updateDictionaries = new UpdateDictionary();
         RenameDictionary renameDictionaries = new RenameDictionary();
 
+        
         private void MainMenu_Load(object sender, RibbonUIEventArgs e)
         {
             presentation = Globals.ThisAddIn.CustomTaskPanes.Add(presentations, "Presentation");
@@ -40,6 +42,10 @@ namespace Planetarium_Plugin
             removeDictionary = Globals.ThisAddIn.CustomTaskPanes.Add(removeDictionaries, "Remove Dictionaries");
             updateDictionary = Globals.ThisAddIn.CustomTaskPanes.Add(updateDictionaries, "Update Dictionaries");
             renameDictionary = Globals.ThisAddIn.CustomTaskPanes.Add(renameDictionaries, "Rename Dictionaries");
+
+           
+            
+            //helpProvider1.HelpNamespace = HTMLHelpClass.GetLocalHelpFileName("MyHelpFile.chm");
           
             //Slide change event handler
             try
@@ -94,6 +100,23 @@ namespace Planetarium_Plugin
             }
         }
 
+     public void reInitialisePresentation() {
+            if (Globals.ThisAddIn.Application.ActivePresentation != null)
+            {
+                Globals.ThisAddIn.Application.ActivePresentation.Close();
+
+               
+                PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
+                PowerPoint.Presentation presentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
+              
+                PowerPoint.Slides slides = presentation.Slides;
+                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+
+                presentation = Globals.ThisAddIn.Application.ActivePresentation;
+            }
+            else { }
+            
+        }
         private void cmdStart_Click(object sender, RibbonControlEventArgs e)
         {
             addDictionary.Visible = false;
@@ -102,16 +125,19 @@ namespace Planetarium_Plugin
             presentation.Visible = true;
             renameDictionary.Visible = false;
             currentlyViewed = "start";
+            reInitialisePresentation();
         }
 
         private void cmdAddDictionary_Click(object sender, RibbonControlEventArgs e)
         {
+            
             removeDictionary.Visible = false;
             updateDictionary.Visible = false;
             renameDictionary.Visible = false;
             presentation.Visible = false;
             addDictionary.Visible = true;
             currentlyViewed = "add";
+            reInitialisePresentation();
         }
 
         private void cmdUpdateDictionary_Click(object sender, RibbonControlEventArgs e)
@@ -122,6 +148,7 @@ namespace Planetarium_Plugin
             renameDictionary.Visible = false;
             updateDictionary.Visible = true;
             currentlyViewed = "update";
+            reInitialisePresentation();
         }
 
         private void cmdDeleteDictionary_Click(object sender, RibbonControlEventArgs e)
@@ -132,16 +159,21 @@ namespace Planetarium_Plugin
             renameDictionary.Visible = false;
             removeDictionary.Visible = true;
             currentlyViewed = "delete";
+            reInitialisePresentation();
         }
 
         private void cmdHelp_Click(object sender, RibbonControlEventArgs e)
         {
             try
-            { 
-                
-                System.Diagnostics.Process.Start(Path.GetFullPath("myPVRS.chm"));
+            {
+            
+                string path = Path.GetFullPath("myPVRS.chm");
+             
+                System.Diagnostics.Process.Start(path);
+             
+               
             }
-            catch (FileNotFoundException ex) { }
+            catch (FileNotFoundException) { }
      
         }
 
@@ -159,6 +191,7 @@ namespace Planetarium_Plugin
             renameDictionary.Visible = true;
             removeDictionary.Visible = false;
             currentlyViewed = "rename";
+            reInitialisePresentation();
         }
         
     }

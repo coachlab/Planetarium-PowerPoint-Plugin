@@ -128,6 +128,8 @@
             // 
             // textBoxDescription
             // 
+            this.textBoxDescription.AccessibleDescription = "Speech Recognition system allows the planetarium to control captioning using voic" +
+                "e";
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxDescription.Location = new System.Drawing.Point(189, 123);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);

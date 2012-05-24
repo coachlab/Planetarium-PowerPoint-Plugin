@@ -12,16 +12,16 @@ using System.Speech.Recognition;
 
 namespace Planetarium_Plugin
 {
-    class PowerPointPlugin
+    class Dictionary
     {
         string dictionaryName = "";
         string location = "";
         string phrase = "";
         PlanetariumDB_API api = new PlanetariumDB_API();
         PowerPoint.Presentation presentation;
-        bool notify = false;
+      
 
-       private void CreateDictionary(string dictionary, string location)
+     /**  private void CreateDictionary(string dictionary, string location)
         {
 
             if (!api.dictionary_exists(dictionaryName))
@@ -76,20 +76,46 @@ namespace Planetarium_Plugin
                }
 
            }
-       }
+       }*/
 
-       private void OpenDictionary(string dictionary, string location) {
 
-           //search how to check if it is open
-           
-           presentation = Globals.ThisAddIn.Application.ActivePresentation;
-           presentation.Close();
+        public Dictionary(string location, string dictionary) {
+
+            
+        }
+
+       public void OpenDictionary(PowerPoint.Presentation presentation, string dictionary, string location) {
+
            presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
            presentation = Globals.ThisAddIn.Application.ActivePresentation;
-          
-       
+  
        }
-       private void LoadDictionaries(ComboBox cmbDictionaries)
+
+       private void closeDictionary(string dictionary, string location)
+       {
+
+           presentation = Globals.ThisAddIn.Application.ActivePresentation;
+           presentation.Close();
+
+       }
+
+       public void reInitialisePresentation()
+       {
+           if (Globals.ThisAddIn.Application.ActivePresentation != null)
+           {
+               Globals.ThisAddIn.Application.ActivePresentation.Close();
+
+               PowerPoint.Application plugin = Globals.ThisAddIn.Application;
+               PowerPoint.Presentation presentation = plugin.Presentations.Add(Office.MsoTriState.msoTrue);
+
+               PowerPoint.Slides slides = presentation.Slides;
+               PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+
+               presentation = Globals.ThisAddIn.Application.ActivePresentation;
+           }
+           else { }
+       }
+    /**   private void LoadDictionaries(ComboBox cmbDictionaries)
        {
 
            List<Dictionary> dic = api.getAllDictionaries();
@@ -196,24 +222,7 @@ namespace Planetarium_Plugin
            MessageBox.Show("Dictionary deleted");
            reloadDictionaries(dictionary);
        }
-
-       /**private void StartPresentation(string dictionary, NumericUpDown Accuracy)
-       {
-           try
-           {
-               SpeechRecognitionEngine sr = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("en-GB"));
-               SpeechRecognition speech = new SpeechRecognition(sr, api.getAllStringKeywordsInDictionary(dictionary), location, dictionaryName, Accuracy.Value, notify);
-    
-               // speech.Start();
-              
-           }
-           catch (NullReferenceException)
-           {
-
-           }
-        
-       }*/
-
+     
        public void NavigateSlides(string phrase)
        {
           
@@ -249,13 +258,12 @@ namespace Planetarium_Plugin
 
        public void ActivateSlideShow()
        {
-           //call open dictionary instead
-           //look into MsoTristate
+           
            presentation = Globals.ThisAddIn.Application.Presentations.Open(location, Office.MsoTriState.msoFalse, Office.MsoTriState.msoFalse, Office.MsoTriState.msoTrue);
            presentation = Globals.ThisAddIn.Application.ActivePresentation;
            presentation.SlideShowSettings.Run();
            presentation.SlideShowWindow.Activate(); //opporunity for a COM exception
-       }
+       }*/
 
 
        }

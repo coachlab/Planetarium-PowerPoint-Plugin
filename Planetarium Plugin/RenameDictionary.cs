@@ -25,12 +25,20 @@ namespace Planetarium_Plugin
         string dictionaryName = "";
         string location = "";
 
+        /// <summary>
+        /// Initialises panel for renaming a dictionary
+        /// </summary>
         public RenameDictionary()
         {
             InitializeComponent();
             pnlDictionary.Enabled = true;
             pnlRenameDictionary.Enabled = false;
         }
+        /// <summary>
+        /// Loads list of available dictionaries on a combobox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RenameDictionary_Load(object sender, EventArgs e)
         {
             
@@ -46,6 +54,12 @@ namespace Planetarium_Plugin
                 cmbDictionaries.Items.Add(d.Type);
             }
         }
+
+        /// <summary>
+        /// Makes sure new dictionaries reflect when user clicks on combobox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbDictionaries_Click(object sender, EventArgs e)
         {
            
@@ -61,6 +75,12 @@ namespace Planetarium_Plugin
                 cmbDictionaries.Items.Add(d.Type);
             }
         }
+        /// <summary>
+        /// Initialises dictionary name and location for dictionary to be renamed and 
+        /// opens selected dictionary to verify that user is renaming the intended dictionary
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbDictionaries_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbDictionaries.SelectedIndex != -1)
@@ -70,13 +90,22 @@ namespace Planetarium_Plugin
             location = api.getDictionary(dictionaryName).Slide_URL;
             txtOldName.Text = dictionaryName;
 
-            Globals.ThisAddIn.Application.ActivePresentation.Close();
+            if (Globals.ThisAddIn.Application.ActivePresentation != null)
+            {
+                Globals.ThisAddIn.Application.ActivePresentation.Close();
+            }
             presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
             presentation = Globals.ThisAddIn.Application.ActivePresentation;
             pnlDictionary.Enabled = false;
             pnlRenameDictionary.Enabled = true;
                     
         }
+
+        /// <summary>
+        /// Does the actual renaming of a dictionary
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdRenameSave_Click(object sender, EventArgs e)
         {
             if (txtRename.Text != "")
@@ -92,7 +121,7 @@ namespace Planetarium_Plugin
                     }
                     
                     reload();
-                    cmbDictionaries.SelectedText = rename; //???
+                    cmbDictionaries.SelectedText = rename; 
                     txtOldName.Text = rename;
                     dictionaryName = rename;
                     
@@ -109,6 +138,11 @@ namespace Planetarium_Plugin
             
         }
 
+        /// <summary>
+        /// Saves all changes and reinitialises controls to allow for renaming of another dictionary
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdSaveChanges_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtRename.Text))
@@ -126,10 +160,26 @@ namespace Planetarium_Plugin
             cmbDictionaries.SelectedIndex = -1;
             pnlDictionary.Enabled = true;
             pnlRenameDictionary.Enabled = false;
-            //presentation.Close();
-        }
-        
+            if (presentation != null)
+            {
+                presentation.Close();
 
+                PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
+                PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
+
+                PowerPoint.Slides slides = newPresentation.Slides;
+                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+
+                newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
+            }
+           
+            
+        }
+
+
+        /// <summary>
+        /// Reloads dictionaries to make sure user is working with updated/ latest dictionaries
+        /// </summary>
         private void reload()
         {
             List<Dictionary> dic = api.getAllDictionaries();

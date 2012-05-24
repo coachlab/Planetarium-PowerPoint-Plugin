@@ -2,23 +2,23 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Planetarium">
   <DataContextMoniker Name="/PlanetariumDataContext" />
   <nestedChildShapes>
-    <classShape Id="4fd74e6c-1852-455f-ba14-eb535f86de35" absoluteBounds="0.75, 1, 2, 1.3862939453125">
+    <classShape Id="ec44fe70-8fac-4ca0-a2bc-05d8bdeb8105" absoluteBounds="0.75, 1, 2, 1.3862939453125">
       <DataClassMoniker Name="/PlanetariumDataContext/Dictionary" />
       <nestedChildShapes>
-        <elementListCompartment Id="132dcac3-8480-48e8-8f83-468c1a56b7e8" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d315bb67-1737-41c1-aa26-3ee8b454e661" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b4ae744e-2ce9-4589-939f-55153ec83f95" absoluteBounds="3.5, 0.875, 2, 1.5785953776041664">
+    <classShape Id="a4cfa5a7-8243-4632-b1fc-0e9fa8e8ab4b" absoluteBounds="3.5, 0.875, 2, 1.5785953776041664">
       <DataClassMoniker Name="/PlanetariumDataContext/Keyword" />
       <nestedChildShapes>
-        <elementListCompartment Id="bd1fd4d8-6503-4bd6-9fcd-e3c555b8fb80" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c1e7f00c-0c14-41ca-a22a-db13ab80c714" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(2.75 : 1.69314697265625); (3.5 : 1.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PlanetariumDataContext/Dictionary/Dictionary_Keyword" />
       <nodes>
-        <classShapeMoniker Id="4fd74e6c-1852-455f-ba14-eb535f86de35" />
-        <classShapeMoniker Id="b4ae744e-2ce9-4589-939f-55153ec83f95" />
+        <classShapeMoniker Id="ec44fe70-8fac-4ca0-a2bc-05d8bdeb8105" />
+        <classShapeMoniker Id="a4cfa5a7-8243-4632-b1fc-0e9fa8e8ab4b" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

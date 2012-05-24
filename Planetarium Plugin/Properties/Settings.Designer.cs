@@ -26,10 +26,43 @@ namespace Planetarium_Plugin.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TULZ-PC1\\SQL2008R2;Initial Catalog=PlanetariumDB;Integrated Security=" +
+            "True")]
+        public string PlanetariumDBConnectionString1 {
+            get {
+                return ((string)(this["PlanetariumDBConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sql2008r2;Initial Catalog=PlanetariumDB;Integrated Security=True")]
         public string PlanetariumDBConnectionString {
             get {
                 return ((string)(this["PlanetariumDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"|DataDirectory|\\Database\\PlanetariumDB" +
+            ".mdf\";Integrated Security=True;User Instance=True")]
+        public string PlanetariumDBConnectionString2 {
+            get {
+                return ((string)(this["PlanetariumDBConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\PlanetariumDB.mdf;Integ" +
+            "rated Security=True;User Instance=True")]
+        public string PlanetariumDBConnectionString3 {
+            get {
+                return ((string)(this["PlanetariumDBConnectionString3"]));
             }
         }
     }

@@ -14,6 +14,7 @@ using System.Text;
 using System.Windows.Forms;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using Office = Microsoft.Office.Core;
+using System.Text.RegularExpressions;
 
 namespace Planetarium_Plugin
 {
@@ -111,6 +112,9 @@ namespace Planetarium_Plugin
         {
             if (txtKeyword.Text != "" && txtSlideNumber.Text!=string.Empty)
             {
+                if(Regex.IsMatch(txtKeyword.Text, @"^[a-zA-Z]+$"))
+                
+                {
                 if (api.keyword_exists(dictionaryName, Int32.Parse(txtSlideNumber.Tag.ToString())))
                 {
                     api.updateKeywordPhrase(keyword, txtKeyword.Text.ToLower(), cmbDictionary.SelectedItem.ToString());
@@ -130,6 +134,12 @@ namespace Planetarium_Plugin
                         MessageBox.Show("Cannot Update Keyword - Add keyword in Add Panel");
                     }
                 }
+                }
+                else
+                {
+                 MessageBox.Show("Keyword can only contain letters");
+                }
+
             }
             else
             {
@@ -156,14 +166,25 @@ namespace Planetarium_Plugin
 
         private void cmdFinish_Click(object sender, EventArgs e)
         {
-
+            
             presentation.Save();
             cmbDictionary.SelectedIndex = -1;
             
             pnlDictionary.Enabled = true;
             
             pnlRenameSlide.Enabled = false;
-            //presentation.Close();
+            if (presentation != null)
+            {
+                presentation.Close();
+
+                PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
+                PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
+
+                PowerPoint.Slides slides = newPresentation.Slides;
+                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+
+                newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
+            }
             
         }
 

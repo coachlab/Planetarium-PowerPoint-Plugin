@@ -62,7 +62,7 @@ namespace Planetarium_Plugin
             }
             catch (NullReferenceException)
             {
-
+                MessageBox.Show("Please select a dictionary to proceed");
             }
         }
 

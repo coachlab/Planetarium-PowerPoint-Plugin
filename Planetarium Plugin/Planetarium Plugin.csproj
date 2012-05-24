@@ -31,10 +31,10 @@
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>C:\Users\Hollard\Desktop\PVRS1\</PublishUrl>
+    <PublishUrl>C:\Users\Hollard\Desktop\PVRS2\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.4</ApplicationVersion>
+    <ApplicationVersion>1.0.0.5</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -43,7 +43,7 @@
     <PublisherName>CoachLab%40JCSE</PublisherName>
     <SupportUrl />
     <FriendlyName>Planetarium Plugin</FriendlyName>
-    <OfficeApplicationDescription />
+    <OfficeApplicationDescription>Planetarium Speech Recognition system is a captioning system that uses Windows Speech to convert speech to text and powerpoint to display keywords  associated with the text.</OfficeApplicationDescription>
     <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
@@ -220,8 +220,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Planetarium.dbml</DependentUpon>
     </Compile>
+    <Compile Include="PlanetariumDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlanetariumDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PlanetariumDB_API.cs" />
-    <Compile Include="PowerPointPlugin.cs" />
     <Compile Include="Presentation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -262,10 +266,12 @@
     <EmbeddedResource Include="UpdateDictionary.resx">
       <DependentUpon>UpdateDictionary.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
-    <Content Include="myPVRS.chm">
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="myPVRS.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
     <None Include="Planetarium Plugin_TemporaryKey.pfx" />
     <None Include="Planetarium.dbml.layout">
       <DependentUpon>Planetarium.dbml</DependentUpon>
@@ -287,6 +293,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Planetarium.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="PlanetariumDBDataSet.xsc">
+      <DependentUpon>PlanetariumDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PlanetariumDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlanetariumDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PlanetariumDBDataSet.xss">
+      <DependentUpon>PlanetariumDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -339,7 +356,15 @@
   <ItemGroup>
     <None Include="icons\1335947130_gallery.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="PlanetariumDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlanetariumDB_log.ldf">
+      <DependentUpon>PlanetariumDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->

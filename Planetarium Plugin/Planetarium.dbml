@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PlanetariumDB" Class="PlanetariumDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sql2008r2;Initial Catalog=PlanetariumDB;Integrated Security=True" SettingsObjectName="Planetarium_Plugin.Properties.Settings" SettingsPropertyName="PlanetariumDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\PlanetariumDB.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="Planetarium_Plugin.Properties.Settings" SettingsPropertyName="PlanetariumDBConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Dictionary" Member="Dictionaries">
     <Type Name="Dictionary">
       <Column Name="Dictionary_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
