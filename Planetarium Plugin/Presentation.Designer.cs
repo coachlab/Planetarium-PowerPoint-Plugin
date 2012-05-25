@@ -84,7 +84,7 @@
             this.cmdDictionary.TabIndex = 4;
             this.cmdDictionary.SelectedIndexChanged += new System.EventHandler(this.cmdDictionary_SelectedIndexChanged);
             this.cmdDictionary.Click += new System.EventHandler(this.cmdDictionary_Click);
-            this.cmdDictionary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdDictionary_KeyPress);
+           
             // 
             // label
             // 

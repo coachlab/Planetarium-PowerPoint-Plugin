@@ -24,11 +24,9 @@ namespace Planetarium_Plugin
         private List<string> keywords;
         private string dictionaryName;
         private string location;
-        private Microsoft.Office.Interop.PowerPoint.Presentation presentation;
+        private Microsoft.Office.Interop.PowerPoint.Presentation pres;
         private decimal accuracy = 0;
-        private static bool listen = true; 
-        bool notify = false;
-
+        
         /// <summary>
         /// Constructor method
         /// </summary>
@@ -46,7 +44,6 @@ namespace Planetarium_Plugin
             keywords = words;
             Grammar g = BuildGrammar();
             Sr.LoadGrammar(g);
-             
         }
 
         /// <summary>
@@ -67,32 +64,36 @@ namespace Planetarium_Plugin
         /// <param name="sender">The object sender.</param>
         /// <param name="e">The result.</param>
         /// 
-
         void sr_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-
-            if (listen == true)
+            if (e.Result.Confidence >= Convert.ToDouble(this.accuracy / 100))
             {
-
-                if (e.Result.Confidence >= Convert.ToDouble(this.accuracy / 100))
+                string  temp = e.Result.Text.ToLower();
+               
+                if (keywords.Contains(temp))
                 {
-                    string temp = e.Result.Text.ToLower();
-
-                    if (keywords.Contains(temp) && Globals.ThisAddIn.notification == true)
+                    if (Globals.ThisAddIn.notification == true)
                     {
-                        DialogResult yes = MessageBox.Show("Do you want to display slide matching " + temp, "Display", MessageBoxButtons.YesNo);
+                        DialogResult yes = MessageBox.Show("Do you want to display slide matching '" + temp + "'","display", MessageBoxButtons.YesNo);
 
                         if (yes.ToString().Equals("Yes"))
                         {
                             ShowSlides(temp);
                         }
+                        else
+                        {
+                            if (pres != null)
+                            {
+                               // pres.SlideShowWindow.View.State = PowerPoint.PpSlideShowState.ppSlideShowBlackScreen;  
+                            }   
+                        }    
                     }
                     else
                     {
-                        ShowSlides(temp);
+                        ShowSlides(temp); 
                     }
                 }
-            }
+            }         
         }
 
         /// <summary>
@@ -119,11 +120,14 @@ namespace Planetarium_Plugin
         {
             Sr.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(sr_SpeechRecognized);
             Sr.RecognizeAsync(RecognizeMode.Multiple);
-            presentation = Globals.ThisAddIn.Application.Presentations.Open(location, Office.MsoTriState.msoFalse, Office.MsoTriState.msoFalse, Office.MsoTriState.msoTrue);
-            presentation = Globals.ThisAddIn.Application.ActivePresentation;
-            presentation.SlideShowSettings.Run();
-            presentation.SlideShowWindow.Activate(); //opporunity for a COM exception
-            //startAsWell();
+            StartSlideShow();
+        }
+
+        void StartSlideShow()
+        {
+            pres = Globals.ThisAddIn.Application.Presentations.Open(location, Office.MsoTriState.msoFalse, Office.MsoTriState.msoFalse, Office.MsoTriState.msoFalse);
+            pres.SlideShowSettings.Run();
+            pres.SlideShowWindow.Activate();
         }
 
         /// <summary>
@@ -133,42 +137,36 @@ namespace Planetarium_Plugin
         public void ShowSlides(string phrase)
         {
             int id = 0;
-            int index = 0;
-            
-
-            if (phrase != null)
+            if (!string.IsNullOrEmpty(phrase))
             {
-                id = api.getKeyword(dictionaryName, phrase).Slide_Num; 
+                id = api.getKeyword(dictionaryName, phrase).Slide_Num;
             }
 
+            int index = 0;
 
             try
             {
-                foreach (PowerPoint.Slide slide in presentation.Slides)
+               if (pres.SlideShowWindow!=null)
                 {
-
-                    if (id == slide.SlideID)
+                    foreach (PowerPoint.Slide slide in pres.Slides)
                     {
-
-                        index = slide.SlideIndex;
-                        if (index != 0)
+                        if (id == slide.SlideID )
                         {
-
-                            presentation.SlideShowWindow.View.GotoSlide(index);
+                            index = slide.SlideIndex;
+                            pres.SlideShowWindow.View.GotoSlide(index);
                         }
                     }
                 }
-                
             }
-            catch (System.Runtime.InteropServices.COMException)
+            catch (System.Runtime.InteropServices.COMException ex)
             {
-
-
+                //Stop();
             }
-           
         }
 
-        /// <summary>
+      
+
+         /// <summary>
         /// Pause speech 
         /// </summary>
         public void Pause()

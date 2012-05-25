@@ -71,7 +71,7 @@ namespace Planetarium_Plugin
 
                     api.addDictionary(dictionaryName, location + ".pptx");
 
-                    MessageBox.Show("Dictionary added. To proceed to adding slides please click on the slide displayed on the left pane");
+                    MessageBox.Show("Dictionary added. You may now add keywords to the dictionary");
 
                     pnlAssociations.Enabled = true;
                     pnlDictionary.Enabled = false;
@@ -111,7 +111,7 @@ namespace Planetarium_Plugin
 
                         else
                         {
-                            MessageBox.Show("Keyword Cannot Be Updated! - Use the Update Panel");
+                            MessageBox.Show("Could not update keyword! - Please use the Update Panel");
                         }
                     }
                     else 
@@ -127,7 +127,7 @@ namespace Planetarium_Plugin
                 }
 
             }
-           catch (NullReferenceException ex)
+           catch (NullReferenceException)
            {
                MessageBox.Show("Please click on the slide in panel"); //make more firendly
            }
@@ -148,7 +148,7 @@ namespace Planetarium_Plugin
                 pnlAssociations.Enabled = false;
                 txtDictionary.Clear();
                 txtPhrase.Clear();
-
+                
                 if (presentation != null)
                 {
                     presentation.Close();
@@ -157,7 +157,7 @@ namespace Planetarium_Plugin
                     PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
 
                     PowerPoint.Slides slides = newPresentation.Slides;
-                    PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+                    PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutObjectAndText);
 
                     newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
                 }

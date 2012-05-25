@@ -58,12 +58,16 @@ namespace Planetarium_Plugin
             {
                 SpeechRecognitionEngine sr = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("en-GB"));
                 SpeechRecognition speech = new SpeechRecognition(sr, api.getAllStringKeywordsInDictionary(cmdDictionary.SelectedItem.ToString()), location, dictionaryName, Accuracy.Value);
-                speech.Start();
+              
+                 speech.Start();
+            
             }
             catch (NullReferenceException)
             {
                 MessageBox.Show("Please select a dictionary to proceed");
+                
             }
+           
         }
 
         /// <summary>
@@ -107,10 +111,6 @@ namespace Planetarium_Plugin
             Globals.ThisAddIn.notification = false;
         }
 
-        private void cmdDictionary_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 'a')
-            MessageBox.Show("testing");
-        }
+
     }
 }

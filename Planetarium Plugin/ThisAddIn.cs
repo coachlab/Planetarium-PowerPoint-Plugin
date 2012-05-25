@@ -13,10 +13,15 @@ namespace Planetarium_Plugin
     {
         public bool listen = true;
         public bool notification = false;
+        public bool isRunning = true;
+       
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+
+
         }
+
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {

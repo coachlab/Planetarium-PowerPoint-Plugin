@@ -31,10 +31,10 @@
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>C:\Users\Hollard\Desktop\PVRS2\</PublishUrl>
+    <PublishUrl>C:\Users\Hollard\Desktop\PVRS\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.5</ApplicationVersion>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -44,7 +44,7 @@
     <SupportUrl />
     <FriendlyName>Planetarium Plugin</FriendlyName>
     <OfficeApplicationDescription>Planetarium Speech Recognition system is a captioning system that uses Windows Speech to convert speech to text and powerpoint to display keywords  associated with the text.</OfficeApplicationDescription>
-    <LoadBehavior>3</LoadBehavior>
+    <LoadBehavior>16</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -269,9 +269,12 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <EmbeddedResource Include="myPVRS.chm">
+    <Resource Include="myPVRS.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Resource>
+    <Resource Include="icons\myPVRS.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="Planetarium Plugin_TemporaryKey.pfx" />
     <None Include="Planetarium.dbml.layout">
       <DependentUpon>Planetarium.dbml</DependentUpon>

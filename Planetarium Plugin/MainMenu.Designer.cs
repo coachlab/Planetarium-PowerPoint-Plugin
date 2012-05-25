@@ -204,9 +204,6 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdAboutUs;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdHelp;
-        internal System.Windows.Forms.HelpProvider p=new System.Windows.Forms.HelpProvider();
-       
-       
         internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdRenameDictionary;
     }
 

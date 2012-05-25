@@ -37,12 +37,13 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.cmbDictionary);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmdRemoveDictionary);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 89);
+            this.panel1.Size = new System.Drawing.Size(186, 89);
             this.panel1.TabIndex = 15;
             // 
             // cmbDictionary
@@ -79,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "RemoveDictionary";
-            this.Size = new System.Drawing.Size(186, 201);
+            this.Size = new System.Drawing.Size(195, 201);
             this.Load += new System.EventHandler(this.RemoveDictionary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -44,15 +44,14 @@ namespace Planetarium_Plugin
             renameDictionary = Globals.ThisAddIn.CustomTaskPanes.Add(renameDictionaries, "Rename Dictionaries");
 
            
-            
-            //helpProvider1.HelpNamespace = HTMLHelpClass.GetLocalHelpFileName("MyHelpFile.chm");
           
             //Slide change event handler
             try
             {
                 
                 Globals.ThisAddIn.Application.SlideSelectionChanged += Application_SlideSelectionChanged;
-               
+                Globals.ThisAddIn.Application.SlideShowEnd += new PowerPoint.EApplication_SlideShowEndEventHandler(Application_SlideShowEnd);
+             
             }
             catch (AccessViolationException ex)
             {
@@ -62,8 +61,19 @@ namespace Planetarium_Plugin
            
         }
 
-        [HandleProcessCorruptedStateExceptions]
+      
 
+       void Application_OnSlideShowTerminate(PowerPoint.SlideShowWindow s)
+        {
+           s.Presentation.Close();
+        }
+
+       void Application_SlideShowEnd(PowerPoint.Presentation Pres ){
+    
+           Pres.Close();
+       }
+
+          [HandleProcessCorruptedStateExceptions]
         //slide change function
         void Application_SlideSelectionChanged(PowerPoint.SlideRange SldRange)
         {
@@ -77,9 +87,9 @@ namespace Planetarium_Plugin
                         try
                         {
                             addDictionaries.showSlideNumber(SldRange.SlideID.ToString(), SldRange.SlideNumber.ToString());
-                            
 
-                       }
+
+                        }
                         catch (System.AccessViolationException ex) { }
 
                     }
@@ -114,7 +124,7 @@ namespace Planetarium_Plugin
 
                 presentation = Globals.ThisAddIn.Application.ActivePresentation;
             }
-            else { }
+          
             
         }
         private void cmdStart_Click(object sender, RibbonControlEventArgs e)
@@ -125,7 +135,7 @@ namespace Planetarium_Plugin
             presentation.Visible = true;
             renameDictionary.Visible = false;
             currentlyViewed = "start";
-            reInitialisePresentation();
+          
         }
 
         private void cmdAddDictionary_Click(object sender, RibbonControlEventArgs e)
@@ -166,15 +176,13 @@ namespace Planetarium_Plugin
         {
             try
             {
-            
                 string path = Path.GetFullPath("myPVRS.chm");
-             
+
                 System.Diagnostics.Process.Start(path);
-             
-               
+
             }
             catch (FileNotFoundException) { }
-     
+            catch (System.ComponentModel.Win32Exception) { }
         }
 
         private void cmdAboutUs_Click(object sender, RibbonControlEventArgs e)

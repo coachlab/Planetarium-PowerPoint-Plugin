@@ -49,7 +49,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pnlRenameDictionary);
-            this.groupBox1.Location = new System.Drawing.Point(3, 86);
+            this.groupBox1.Location = new System.Drawing.Point(3, 105);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(195, 138);
             this.groupBox1.TabIndex = 11;
@@ -58,6 +58,7 @@
             // 
             // pnlRenameDictionary
             // 
+            this.pnlRenameDictionary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlRenameDictionary.Controls.Add(this.cmdRenameSave);
             this.pnlRenameDictionary.Controls.Add(this.txtOldName);
             this.pnlRenameDictionary.Controls.Add(this.label2);
@@ -116,13 +117,14 @@
             this.groupBox3.Controls.Add(this.pnlDictionary);
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(195, 77);
+            this.groupBox3.Size = new System.Drawing.Size(195, 84);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dictionaries";
             // 
             // pnlDictionary
             // 
+            this.pnlDictionary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlDictionary.Controls.Add(this.label4);
             this.pnlDictionary.Controls.Add(this.cmbDictionaries);
             this.pnlDictionary.Location = new System.Drawing.Point(12, 19);
@@ -144,14 +146,14 @@
             this.cmbDictionaries.FormattingEnabled = true;
             this.cmbDictionaries.Location = new System.Drawing.Point(9, 27);
             this.cmbDictionaries.Name = "cmbDictionaries";
-            this.cmbDictionaries.Size = new System.Drawing.Size(164, 21);
+            this.cmbDictionaries.Size = new System.Drawing.Size(160, 21);
             this.cmbDictionaries.TabIndex = 6;
             this.cmbDictionaries.SelectedIndexChanged += new System.EventHandler(this.cmbDictionaries_SelectedIndexChanged);
             this.cmbDictionaries.Click += new System.EventHandler(this.cmbDictionaries_Click);
             // 
             // cmdSaveChanges
             // 
-            this.cmdSaveChanges.Location = new System.Drawing.Point(61, 230);
+            this.cmdSaveChanges.Location = new System.Drawing.Point(63, 249);
             this.cmdSaveChanges.Name = "cmdSaveChanges";
             this.cmdSaveChanges.Size = new System.Drawing.Size(94, 26);
             this.cmdSaveChanges.TabIndex = 14;

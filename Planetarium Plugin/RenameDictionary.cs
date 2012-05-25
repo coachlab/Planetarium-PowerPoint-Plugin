@@ -113,7 +113,7 @@ namespace Planetarium_Plugin
                 if (api.dictionary_exists(dictionaryName))
                 {
                     string rename = txtRename.Text;
-                    DialogResult r = MessageBox.Show("Are you sure you want to rename the " + dictionaryName + " dictionary \n to " +rename+ "?", "Delete Dictionary Confirmation", MessageBoxButtons.YesNo);
+                    DialogResult r = MessageBox.Show("Are you sure you want to rename the " + "\"" + dictionaryName + "\"" + " dictionary \n to " + "\"" + rename + "\"" + "?", "Rename Dictionary Confirmation", MessageBoxButtons.YesNo);
                     if (r.ToString().Equals("Yes"))
                     {
                         api.updateDictionary(dictionaryName, rename);
@@ -133,7 +133,7 @@ namespace Planetarium_Plugin
             }
             else
             {
-                MessageBox.Show("Field cannot be Blank");
+                MessageBox.Show("Field cannot be Blank- Please enter a new dictionary name");
             }
             
         }
@@ -148,31 +148,22 @@ namespace Planetarium_Plugin
             if (!string.IsNullOrEmpty(txtRename.Text))
             {
                 presentation.SaveAs(location, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
-                presentation.Save();  
+                presentation.Save();
+                //presentation.Close();
+                cmbDictionaries.SelectedIndex = -1;
+                txtOldName.Clear();
+                txtRename.Clear();
+
+                pnlDictionary.Enabled = true;
+                pnlRenameDictionary.Enabled = false;
+                
             }
             else {
                 MessageBox.Show("No changes have been made");
 
             }
-            
-            txtOldName.Clear();
-            txtRename.Clear();
-            cmbDictionaries.SelectedIndex = -1;
-            pnlDictionary.Enabled = true;
-            pnlRenameDictionary.Enabled = false;
-            if (presentation != null)
-            {
-                presentation.Close();
 
-                PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
-                PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
-
-                PowerPoint.Slides slides = newPresentation.Slides;
-                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
-
-                newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
-            }
-           
+            resetDictionary();
             
         }
 
@@ -199,7 +190,22 @@ namespace Planetarium_Plugin
             //cmbDictionaries.SelectedIndex = 0;
         }
 
-     
+        void resetDictionary() {
+            if (presentation != null)
+            {
+                presentation.Close();
+
+                PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
+                PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
+
+                PowerPoint.Slides slides = newPresentation.Slides;
+                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+
+                newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
+            }
+           
+        
+        }
 
     }
 }

@@ -27,22 +27,27 @@ namespace Planetarium_Plugin
             if (cmbDictionary.SelectedIndex != -1)
             {
                 dictionary = cmbDictionary.SelectedItem.ToString();
-                DialogResult r = MessageBox.Show("Are you sure you want to delete the " + dictionary + " dictionary?", "Delete Dictionary Confirmation", MessageBoxButtons.YesNo);
+                DialogResult r = MessageBox.Show("Are you sure you want to delete the " + "\"" + dictionary +"\"" +" dictionary?", "Delete Dictionary Confirmation", MessageBoxButtons.YesNo);
                 if (r.ToString().Equals("Yes"))
                 {
                     api.removeDictionary(cmbDictionary.SelectedItem.ToString());
-                    MessageBox.Show("Dictionary deleted");
+                    MessageBox.Show("Successfully removed dictionary");
                 }
                 
             }
             else
             {
-                MessageBox.Show("Dictionary was not selected - Please select a dictionary to delete");
+                MessageBox.Show("No dictionary selected - Please select a dictionary to delete");
             }
             reload();
             
        }
 
+        /// <summary>
+        /// reloads all dictionaries when the control is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveDictionary_Load(object sender, EventArgs e)
         {
             reload();

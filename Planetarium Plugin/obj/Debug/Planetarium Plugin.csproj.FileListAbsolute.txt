@@ -1,0 +1,25 @@
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PlanetariumDB.mdf
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PlanetariumDB_log.ldf
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\AboutBox1.resx
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\AboutBox1.cs
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\AboutBox1.Designer.cs
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PP.dll.config
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PP.dll
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PP.pdb
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PP.dll.manifest
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\PP.vsto
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\PP.g.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AboutBox1.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.AddDictionary.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.MainMenu.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RemoveDictionary.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.RenameDictionary.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.UpdateDictionary.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Presentation.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium_Plugin.Properties.Resources.resources
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium Plugin.csproj.GenerateResource.Cache
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\PP.dll
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\PP.pdb
+C:\Users\Hollard\Desktop\PROJECT V2\Planetarium Plugin\obj\Debug\Planetarium Plugin.csprojResolveAssemblyReference.cache

@@ -46,15 +46,15 @@ namespace Planetarium_Plugin
 
            // if (Globals.ThisAddIn.Application.ActivePresentation != null)
            // {
-                presentation = Globals.ThisAddIn.Application.ActivePresentation;
-                //Globals.ThisAddIn.Application.ActivePresentation.Close();
+             //   presentation = Globals.ThisAddIn.Application.ActivePresentation;
+              //  Globals.ThisAddIn.Application.ActivePresentation.Close();
            // }
-           // else
-            //{
-                Globals.ThisAddIn.Application.ActivePresentation.Close();
+           //// else
+           // {
+             Globals.ThisAddIn.Application.ActivePresentation.Close();
                 presentation = Globals.ThisAddIn.Application.Presentations.Open(location);
                 presentation = Globals.ThisAddIn.Application.ActivePresentation;
-            //}
+          // }
             pnlDictionary.Enabled = false;
             pnlRenameSlide.Enabled = true;
  
@@ -167,24 +167,26 @@ namespace Planetarium_Plugin
         private void cmdFinish_Click(object sender, EventArgs e)
         {
             
-            presentation.Save();
-            cmbDictionary.SelectedIndex = -1;
-            
-            pnlDictionary.Enabled = true;
-            
-            pnlRenameSlide.Enabled = false;
             if (presentation != null)
             {
+                presentation.Save();
                 presentation.Close();
 
                 PowerPoint.Application pptApp = Globals.ThisAddIn.Application;
                 PowerPoint.Presentation newPresentation = pptApp.Presentations.Add(Office.MsoTriState.msoTrue);
 
                 PowerPoint.Slides slides = newPresentation.Slides;
-                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutCustom);
+                PowerPoint.Slide slide = slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutBlank);
 
                 newPresentation = Globals.ThisAddIn.Application.ActivePresentation;
+                
+                
             }
+            cmbDictionary.SelectedIndex = -1;
+
+            pnlDictionary.Enabled = true;
+
+            pnlRenameSlide.Enabled = false;
             
         }
 

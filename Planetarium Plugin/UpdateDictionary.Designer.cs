@@ -64,11 +64,11 @@
             // 
             // cmdUpdateDictionary
             // 
-            this.cmdUpdateDictionary.Location = new System.Drawing.Point(49, 71);
+            this.cmdUpdateDictionary.Location = new System.Drawing.Point(47, 71);
             this.cmdUpdateDictionary.Name = "cmdUpdateDictionary";
-            this.cmdUpdateDictionary.Size = new System.Drawing.Size(91, 23);
+            this.cmdUpdateDictionary.Size = new System.Drawing.Size(113, 23);
             this.cmdUpdateDictionary.TabIndex = 4;
-            this.cmdUpdateDictionary.Text = "Update slide";
+            this.cmdUpdateDictionary.Text = "Update keyword";
             this.cmdUpdateDictionary.UseVisualStyleBackColor = true;
             this.cmdUpdateDictionary.Click += new System.EventHandler(this.cmdUpdateDictionary_Click);
             // 
@@ -81,6 +81,7 @@
             // 
             // pnlRenameSlide
             // 
+            this.pnlRenameSlide.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlRenameSlide.Controls.Add(this.cmdUpdateDictionary);
             this.pnlRenameSlide.Controls.Add(this.txtKeyword);
             this.pnlRenameSlide.Controls.Add(this.label6);
@@ -119,7 +120,7 @@
             // 
             // cmdFinish
             // 
-            this.cmdFinish.Location = new System.Drawing.Point(58, 232);
+            this.cmdFinish.Location = new System.Drawing.Point(80, 232);
             this.cmdFinish.Name = "cmdFinish";
             this.cmdFinish.Size = new System.Drawing.Size(91, 23);
             this.cmdFinish.TabIndex = 8;
@@ -135,7 +136,7 @@
             this.groupBox2.Size = new System.Drawing.Size(187, 128);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Rename a slide";
+            this.groupBox2.Text = "Change keyword";
             // 
             // groupBox3
             // 
@@ -149,6 +150,7 @@
             // 
             // pnlDictionary
             // 
+            this.pnlDictionary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlDictionary.Controls.Add(this.label4);
             this.pnlDictionary.Controls.Add(this.cmbDictionary);
             this.pnlDictionary.Location = new System.Drawing.Point(6, 18);
@@ -179,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.cmdFinish);
